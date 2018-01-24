@@ -44,7 +44,23 @@ export class MyApp {
 	}
 
 	initializeApp() {
-		this.rootPage = LoginPage;
+			this.platform.ready().then(() => {
+				this.statusBar.styleDefault();
+			});
+
+			this.auth.afAuth.authState
+				.subscribe(
+					user => {
+						if (user) {
+							this.rootPage = HomePage;
+						} else {
+							this.rootPage = LoginPage;
+						}
+					},
+					() => {
+						this.rootPage = LoginPage;
+					}
+				);
 	}
 
 	login() {
