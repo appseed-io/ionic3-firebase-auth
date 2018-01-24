@@ -13,11 +13,16 @@ import { HomeModule } from '../pages/home/home.module';
 import { SlideBoxModule } from '../pages/slide-box/slide-box.module';
 import { WordpressModule } from '../pages/wordpress/wordpress.module';
 import { MyApp } from './app.component';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { firebaseConfig } from '../config';
+import { LoginPage } from '../pages/login/login';
 
 
 @NgModule({
 	declarations: [
-		MyApp
+		MyApp,
+		LoginPage
 	],
 	imports: [
 		BrowserModule,
@@ -25,6 +30,7 @@ import { MyApp } from './app.component';
 		IonicModule.forRoot(MyApp),
 		AgmCoreModule.forRoot(),
 
+		AngularFireModule.initializeApp(firebaseConfig.fire),
 
 		ComponentsModule,
 		NgxErrorsModule,
@@ -35,12 +41,14 @@ import { MyApp } from './app.component';
 	],
 	bootstrap: [IonicApp],
 	entryComponents: [
-		MyApp
+		MyApp,
+		LoginPage
 	],
 	providers: [
 		Config,
 		StatusBar,
-		{provide: ErrorHandler, useClass: IonicErrorHandler}
+		{provide: ErrorHandler, useClass: IonicErrorHandler},
+		AngularFireAuth
 	]
 })
 export class AppModule {
