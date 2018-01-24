@@ -7,8 +7,6 @@ import { GoogleMapsPage } from '../pages/google-maps/google-maps.page';
 import { HomePage } from '../pages/home/home.page';
 import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
 import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
-import { LoginPage } from '../pages/login/login';
-import { AuthService } from '../services/auth.service';
 
 @Component({
 	templateUrl: 'app.html'
@@ -25,8 +23,8 @@ export class MyApp {
 
 	constructor(app: App, platform: Platform,
 		menu: MenuController,
-		private statusBar: StatusBar,
-		private auth: AuthService) {
+		private statusBar: StatusBar
+		) {
 		this.menu = menu;
 		this.app = app;
 		this.platform = platform;
@@ -43,37 +41,9 @@ export class MyApp {
 	}
 
 	initializeApp() {
-		this.platform.ready().then(() => {
-			this.statusBar.styleDefault();
-		});
-
-		this.auth.afAuth.authState
-			.subscribe(
-				user => {
-					if (user) {
-						this.rootPage = HomePage;
-					} else {
-						this.rootPage = LoginPage;
-					}
-				},
-				() => {
 					this.rootPage = HomePage;
-				}
-			);
 	}
 
-	login() {
-		this.menu.close();
-		this.auth.signOut();
-		this.nav.setRoot(LoginPage);
-	}
-
-	logout() {
-		this.menu.close();
-		this.auth.signOut();
-		this.nav.setRoot(HomePage);
-	}
-	
 	openPage(page) {
 	this.menu.close();
 	this.nav.setRoot(page.component);
