@@ -9,6 +9,7 @@ import { SlideBoxPage } from '../pages/slide-box/slide-box.page';
 import { WordpressListPage } from '../pages/wordpress/list/wordpress.list.page';
 
 import { LoginPage } from '../pages/login/login';
+import { AuthService } from '../services/auth.service';
 
 @Component({
 	templateUrl: 'app.html'
@@ -25,8 +26,8 @@ export class MyApp {
 
 	constructor(app: App, platform: Platform,
 		menu: MenuController,
-		private statusBar: StatusBar
-		) {
+		private statusBar: StatusBar,
+		private auth: AuthService) {
 		this.menu = menu;
 		this.app = app;
 		this.platform = platform;

@@ -17,12 +17,13 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
 import { LoginPage } from '../pages/login/login';
-
+import { AuthService } from '../services/auth.service';
 
 @NgModule({
 	declarations: [
 		MyApp,
-		LoginPage
+		LoginPage,
+		SignupPage
 	],
 	imports: [
 		BrowserModule,
@@ -48,7 +49,8 @@ import { LoginPage } from '../pages/login/login';
 		Config,
 		StatusBar,
 		{provide: ErrorHandler, useClass: IonicErrorHandler},
-		AngularFireAuth
+		AngularFireAuth,
+		AuthService
 	]
 })
 export class AppModule {

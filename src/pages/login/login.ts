@@ -40,6 +40,6 @@ export class LoginPage {
 				() => this.navCtrl.setRoot(HomePage),
 				error => this.loginError = error.message
 			);
-}
+    }
 
 }
