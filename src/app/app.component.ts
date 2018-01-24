@@ -47,6 +47,18 @@ export class MyApp {
 		this.rootPage = LoginPage;
 	}
 
+	login() {
+		this.menu.close();
+		this.auth.signOut();
+		this.nav.setRoot(LoginPage);
+	}
+
+	logout() {
+		this.menu.close();
+		this.auth.signOut();
+		this.nav.setRoot(HomePage);
+	}
+
 	openPage(page) {
 	this.menu.close();
 	this.nav.setRoot(page.component);

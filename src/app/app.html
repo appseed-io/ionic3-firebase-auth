@@ -11,6 +11,17 @@
 			<ion-icon [name]="p.icon" item-left></ion-icon>
 			{{p.title}}
 		</ion-item>
+		<ion-list-header *ngIf="auth.getEmail()">{{auth.getEmail()}}</ion-list-header>
+
+		<ion-item (click)="logout()" *ngIf="auth.authenticated">
+			<ion-icon name="log-out" item-left></ion-icon>
+			Log out
+		</ion-item>
+
+		<ion-item (click)="login()" *ngIf="!auth.authenticated">
+			<ion-icon name="log-in" item-left></ion-icon>
+			Log in
+		</ion-item>
 	</ion-list>
 
 </ion-content>
