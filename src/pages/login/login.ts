@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home.page';
 import { AuthService } from '../../services/auth.service';
+import { SignupPage } from '../signup/signup';
 
 @IonicPage()
 @Component({
@@ -41,5 +42,9 @@ export class LoginPage {
 				error => this.loginError = error.message
 			);
     }
+
+  signup(){
+    this.navCtrl.push(SignupPage);
+  }
 
 }

@@ -18,6 +18,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { firebaseConfig } from '../config';
 import { LoginPage } from '../pages/login/login';
 import { AuthService } from '../services/auth.service';
+import { SignupPage } from '../pages/signup/signup';
 
 @NgModule({
 	declarations: [
@@ -43,7 +44,8 @@ import { AuthService } from '../services/auth.service';
 	bootstrap: [IonicApp],
 	entryComponents: [
 		MyApp,
-		LoginPage
+		LoginPage,
+		SignupPage
 	],
 	providers: [
 		Config,
