@@ -42,12 +42,12 @@ or
 use ionic <code>serve --lab</code> to run the app in a browser on two platforms at the same time.
 <h3>Add a platform</h3>
 
-<pre>$ ionic platform add <platform></pre>
+<pre>$ ionic platform add <span><</span>platform<span>></span></pre>
 
 Supported Cordova platforms:
 
-<pre>$ ionic platform add ios</pre>
-<pre>$ ionic platform add android</pre>
+<pre>$ ionic platform add ios
+$ ionic platform add android</pre>
 
 <h3>Build the app</h3>
 
