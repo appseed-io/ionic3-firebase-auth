@@ -1,5 +1,5 @@
 # ionic3-firebase-auth
-An Ionic 3 application based on the Supermodular2 starter. This project is the source code of a tutorial on Integrating Firebase Password and Google Authentication into your Ionic 3 App, originally published at http://appseed.io/blog/integrating-firebase-password-and-google-authentication-your-ionic-3-app
+An Ionic 3 application based on the Supermodular2 starter. This project is the source code of the tutorial on "How To Authenticate with Firebase and Ionic 3 - Email/Password and Google Sign-In", originally published at http://appseed.io/blog/how-authenticate-firebase-and-ionic-3-emailpassword-and-google-sign
 <ul><li>Project's Home: https://github.com/appseed-io/supermodular2</li></ul>
 <blockquote>
   <p>
