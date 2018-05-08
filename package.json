@@ -29,6 +29,7 @@
     "angularfire2": "5.0.0-rc.4",
     "cordova-plugin-browsertab": "^0.2.0",
     "cordova-plugin-buildinfo": "^2.0.1",
+    "cordova-plugin-customurlscheme": "^4.3.0",
     "cordova-plugin-device": "1.1.4",
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-webview": "1.1.16",
@@ -60,7 +61,10 @@
       "cordova-plugin-buildinfo": {},
       "cordova-universal-links-plugin": {},
       "cordova-plugin-browsertab": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-customurlscheme": {
+        "URL_SCHEME": "io.ionic.starter"
+      }
     },
     "platforms": []
   }

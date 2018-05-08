@@ -86,10 +86,12 @@
     <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <plugin name="cordova-plugin-inappbrowser" spec="^3.0.0" />
     <universal-links>
-      <host name="https://hpt54.app.goo.gl/ugkL" scheme="https" />
-      <host name="supermodular-c9b81.firebaseapp.com" scheme="https">
-        <path url="/__/auth/callback"/>
-      </host>
+        <host name="https://hpt54.app.goo.gl/ugkL" scheme="https" />
+        <host name="supermodular-c9b81.firebaseapp.com" scheme="https">
+            <path url="/__/auth/callback" />
+        </host>
     </universal-links>
-
+    <plugin name="cordova-plugin-customurlscheme" spec="^4.3.0">
+        <variable name="URL_SCHEME" value="io.ionic.starter" />
+    </plugin>
 </widget>
